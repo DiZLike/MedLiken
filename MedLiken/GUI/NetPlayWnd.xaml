@@ -1,0 +1,47 @@
+﻿<Window x:Class="MedLiken.GUI.NetPlayWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NetPlay" Height="253" Width="300" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+    <Border Style="{StaticResource bordmain}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="29"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Style="{StaticResource BackLabel}" Grid.ColumnSpan="2">Сетевая игра</Label>
+
+            <Label Grid.Row="1">Server:</Label>
+            <Label Grid.Row="2">Port:</Label>
+            <Label Grid.Row="3">Password:</Label>
+            <Label Grid.Row="4">Nick:</Label>
+            <Label Grid.Row="5">Key MD5:</Label>
+            <Label Grid.Row="6">Player count:</Label>
+
+            <TextBox x:Name="server" Grid.Column="1" Grid.Row="1">####</TextBox>
+            <TextBox x:Name="port" Grid.Column="1" Grid.Row="2" PreviewTextInput="TextBox_PreviewTextInput">####</TextBox>
+            <PasswordBox x:Name="password" Grid.Column="1" Grid.Row="3" Password="####"></PasswordBox>
+            <TextBox x:Name="nick" Grid.Column="1" Grid.Row="4">####</TextBox>
+            <TextBox x:Name="md5" Grid.Column="1" Grid.Row="5">####</TextBox>
+            <Grid Grid.Column="1" Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Slider x:Name="players" Grid.Column="0" Maximum="16" ValueChanged="volume_ValueChanged" SmallChange="1" IsSnapToTickEnabled="True"></Slider>
+                <Label x:Name="lPlayers" Margin="0,2,0,3" Grid.Column="1">###</Label>
+            </Grid>
+            
+            <Button Grid.Row="8" Grid.ColumnSpan="2" Click="BtnSave">Ok</Button>
+        </Grid>
+    </Border>
+</Window>

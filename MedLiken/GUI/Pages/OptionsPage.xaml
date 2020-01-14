@@ -1,0 +1,35 @@
+﻿<Page x:Class="MedLiken.GUI.Pages.OptionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="151" d:DesignWidth="300"
+	Title="OptionsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Label Style="{StaticResource BackLabel}" Grid.Row="0" Grid.ColumnSpan="2">Аудио</Label>
+        <CheckBox x:Name="monosound" Grid.Row="1" Grid.ColumnSpan="2">Force monophonic sound output</CheckBox>
+
+        <Label Style="{StaticResource BackLabel}" Grid.Row="2" Grid.ColumnSpan="2">Разрешение</Label>
+        <Label Grid.Row="3">Fullscreen resolution:</Label>
+        <Label Grid.Row="4">Fullscreen scaling factor:</Label>
+        <Label Grid.Row="5">Windowed scaling factor:</Label>
+        <ComboBox x:Name="fsRes" Grid.Column="1" Grid.Row="3"></ComboBox>
+        <ComboBox x:Name="scalefs" Grid.Column="1" Grid.Row="4"></ComboBox>
+        <ComboBox x:Name="scale" Grid.Column="1" Grid.Row="5"></ComboBox>
+    </Grid>
+</Page>

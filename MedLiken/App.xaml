@@ -1,0 +1,8 @@
+﻿<Application x:Class="MedLiken.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="GUI/MainWnd.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="GUI/MyDictionary.xaml"></ResourceDictionary>
+    </Application.Resources>
+</Application>
